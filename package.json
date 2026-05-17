@@ -1,0 +1,11 @@
+{
+  "name": "stardesk",
+  "version": "1.1.1",
+  "description": "HaxBall Desktop Client",
+  "main": "main.js",
+  "author": "StarDesk",
+  "license": "MIT",
+  "dependencies": {
+    "discord-rpc": "^4.0.1"
+  }
+}

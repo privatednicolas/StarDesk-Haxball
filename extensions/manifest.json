@@ -1,0 +1,60 @@
+{
+    "manifest_version": 3,
+    "name": "HaxBall Desktop",
+    "version": "1.0.0",
+    "description": "HaxBall Desktop Extension",
+    "background": {
+        "service_worker": "interceptor.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://www.haxball.com/*",
+                "*://haxball.com/*",
+                "*://html5.haxball.com/*"
+            ],
+            "js": [
+                "core.js",
+                "styles.js",
+                "security.js",
+                "header.js",
+                "background.js",
+                "ads.js",
+                "roomlist.js",
+                "settings.js",
+                "inputboost.js",
+                "leaveroom.js",
+                "hosttoken.js",
+                "stretched.js",
+                "shortcuts.js",
+                "discord.js",
+                "discordgame.js",
+                "chatlinks.js",
+                "recaptcha-block.js",
+                "streammode.js",
+                "pip.js"
+            ],
+            "run_at": "document_start",
+            "all_frames": true
+        }
+    ],
+    "permissions": [
+        "tabs"
+    ],
+    "host_permissions": [
+        "*://www.haxball.com/*",
+        "*://haxball.com/*",
+        "*://html5.haxball.com/*",
+        "http://127.0.0.1:5483/*"
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "runtime.js"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
